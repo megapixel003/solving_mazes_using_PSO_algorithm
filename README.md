@@ -1,2 +1,3 @@
 # solving_mazes_using_PSO_algorithm
-Using PSO algorithm, applying neural network to directly control speed, building reward - punishment function,...
+2D simulation of two-wheel differential drive robot. Using PSO algorithm, applying neural network to control speed, constructing direct reward-punishment function, etc.
+
