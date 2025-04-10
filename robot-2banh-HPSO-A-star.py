@@ -267,7 +267,7 @@ if __name__ == "__main__":
     max_run_time = 600
 
     # enviroment
-    env = Enviroment('./map/map-3.png', end_point)
+    env = Enviroment('C:/Users/admin/Desktop/HKII-24-25/CD_Robot_n_AI/public-to-Github/hard-maze-2.jpg', end_point)
 
     robots = []
     num_robot = 20
@@ -297,15 +297,16 @@ if __name__ == "__main__":
     JJ = np.zeros(pop_size)
 
     P_pso = []
-    # lấy trọng số đầu từ file json
-    with open("./results/map-3/result13/best_path_and_parameters.json", "r") as f:
-        d = json.load(f).get("best_parameters")
-        for i in range(pop_size):
-            noise = np.random.uniform(-1, 1, len(d))
-            P_pso.append(np.array(d) + noise)
-        P_pso = np.array(P_pso)
-        print("Load parameters from file")
-        print(P_pso)
+    # # lấy trọng số đầu từ file json
+    # with open("./results/map-3/result13/best_path_and_parameters.json", "r") as f:
+    #     d = json.load(f).get("best_parameters")
+    #     for i in range(pop_size):
+    #         noise = np.random.uniform(-1, 1, len(d))
+    #         P_pso.append(np.array(d) + noise)
+    #     P_pso = np.array(P_pso)
+    #     print("Load parameters from file")
+    #     print(P_pso)
+    
     # Khởi tạo PSO random
     if len(P_pso) == 0:
         P_pso = np.random.uniform(min_max[0], min_max[1], (pop_size, npar))
@@ -323,7 +324,7 @@ if __name__ == "__main__":
             robots = []
             
             for i in range(num_robot):
-                robots.append(Robot(start, './robotPenguin.png', env.map_copy))
+                robots.append(Robot(start, 'C:/Users/admin/Desktop/HKII-24-25/CD_Robot_n_AI/public-to-Github/robotPenguin.png', env.map_copy))
 
             run_time = 0
             last_time = pygame.time.get_ticks()
